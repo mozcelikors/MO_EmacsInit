@@ -128,3 +128,7 @@
 		(switch-to-buffer
 			(generate-new-buffer-name "*shell3"))))
 
+;; When editing tex files in tex-mode, you may want to create another buffer for the pdf, in DocView. We want DocView to be continous, to scroll pages easily. Therefore, we set it to true 't' as opposed to false 'nil'
+(setq doc-view-continuous t)
+
+
