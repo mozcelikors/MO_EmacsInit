@@ -131,4 +131,8 @@
 ;; When editing tex files in tex-mode, you may want to create another buffer for the pdf, in DocView. We want DocView to be continous, to scroll pages easily. Therefore, we set it to true 't' as opposed to false 'nil'
 (setq doc-view-continuous t)
 
-
+;; Split the window to our use.. C-x 3  + C-x 2 + then, switch buffers
+(split-window-right)
+(switch-to-buffer "*shell") ; Switch buffer to other shell that we have created
+(split-window-below)
+(switch-to-buffer "*shell1")  ; Switch buffer to other shell that we have created
