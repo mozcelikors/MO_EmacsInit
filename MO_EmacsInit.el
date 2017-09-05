@@ -149,3 +149,11 @@
 
 ;; Load the ssh client we use from https://github.com/ieure/ssh-el/blob/master/ssh.el
 (load-file "~/.emacs.d/ssh.el")
+
+;; SSH mode setup
+(require 'ssh)
+    (add-hook 'ssh-mode-hook
+              (lambda ()
+                (setq ssh-directory-tracking-mode t)
+                (shell-dirtrack-mode t)
+                (setq dirtrackp nil)))
