@@ -1,6 +1,8 @@
 ;;  EMACS INIT FILE FOR GNU Emacs 24
 ;;  @author mozcelikors <mozcelikors@gmail.com>
 
+;; I use leuven theme since it is good-looking with 'tabbar', that is what is set below automatically..
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -10,8 +12,7 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
- '(custom-enabled-themes (quote (whiteboard)))
- '(tabbar-mode t nil (tabbar)))
+ '(custom-enabled-themes (quote (leuven))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -140,8 +141,11 @@
 
 ;; Load tabbar-2.0.1 from https://marmalade-repo.org/packages/tabbar-2.0.1.el, put in ~/.emacs.d
 ;; We access to it here
-(load-file "/home/mozcelikors/.emacs.d/tabbar-2.0.1.el")
+(load-file "~/.emacs.d/tabbar-2.0.1.el")
 (tabbar-mode)
 ;; Define our navigation keys for between tabs
 (global-set-key (kbd "C-c <right>") 'tabbar-forward-tab)
 (global-set-key (kbd "C-c <left>") 'tabbar-backward-tab)
+
+;; Load the ssh client we use from https://github.com/ieure/ssh-el/blob/master/ssh.el
+(load-file "~/.emacs.d/ssh.el")
