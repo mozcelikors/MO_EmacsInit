@@ -111,17 +111,19 @@
 ;(wl)
 
 
+
 ;; Create a dired buffer, the Directory Editor for on the side use.
-(dired "/home/mozcelikors/")
+(dired "/home/mozcelikors-host/")
 
 ;; Start a few shells, with specified directories
-(let ((default-directory "/home/mozcelikors/"))
+;; Directories should end with / always..
+(let ((default-directory "/home/mozcelikors-host/"))
 	(shell "*shell"))
 
-(let ((default-directory "/media/sf_Ubuntu_Shared/MyGitHub/"))
+(let ((default-directory "/home/mozcelikors-host/"))
 	(shell "*shell1"))
 
-(let ((default-directory "/home/mozcelikors/"))
+(let ((default-directory "/home/mozcelikors-host/"))
 	(shell "*shell2"))
 
 ;; Switch buffer to the created shell after Emacs launches
